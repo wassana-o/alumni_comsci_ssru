@@ -237,7 +237,7 @@ foreach ($publisher as $sql) {
                     <h4><strong>ที่อยู่</strong></h4>
                   </th>
                   <td>
-                    <h4><?php echo $sql["alumni_address"] ?></h4>
+                    <h4><?php echo "*****************************",substr($sql["alumni_address"], -50);?></h4>
                   </td>
                 </tr>
                 <tr>
