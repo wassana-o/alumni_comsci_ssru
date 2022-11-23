@@ -229,7 +229,7 @@ foreach ($publisher as $sql) {
                     <h4><strong>เบอร์โทร</strong></h4>
                   </th>
                   <td>
-                    <h4><?php echo  substr( $sql["alumni_phone"], 0,5),"*****";?></h4>
+                    <h4><?php echo  substr( $sql["alumni_phone"], 0,5),"*****"; ?></h4>
                   </td>
                 </tr>
                 <tr>
