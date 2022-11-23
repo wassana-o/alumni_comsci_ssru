@@ -116,8 +116,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <label class="form-label" for="alumni_birthday">วันเกิด <b style="color:red;">*</b></label>
-                        <input type="date" name="alumni_birthday" placeholder="วันเกิด" class="form-control form-control-lg" required />
+                        <label class="form-label" for="alumni_birthday">วันเกิด</label>
+                        <input type="date" name="alumni_birthday" placeholder="วันเกิด" class="form-control form-control-lg" />
                       </div>
                     </div>
                   </div>
