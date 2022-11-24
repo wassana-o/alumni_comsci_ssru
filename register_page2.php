@@ -88,8 +88,9 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
       console.log('Copied Text')
     }
   </script>
-   <script>
+  <script>
     const myTimeout = setTimeout(modalAccept, 500);
+
     function modalAccept() {
       console.log("TEST");
       $(document).ready(function() {
@@ -98,11 +99,15 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     }
   </script>
   <!-- Modal Accept -->
-  <div id="acceptPolicy" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div id="acceptPolicy" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header" style="  display: flex; align-items: center; justify-content: center;">
-          <h5 class="modal-title">นโยบายคุ้มครองข้อมูลส่วนบุคคล <br> (Personal Data Privacy Policy)</h5>
+        <div class="modal-header" style="  display: flex;
+  align-items: center;
+  justify-content: center;">
+          <h5 class="modal-title">นโยบายคุ้มครองข้อมูลส่วนบุคคล <br>
+            (Personal Data Privacy Policy)</h5>
+
         </div>
         <div class="modal-body">
           <p style="text-align: justify;padding: 10px;">&nbsp; &nbsp; &nbsp; <b>สาขาวิชาวิทยาการคอมพิวเตอร์และนวัตกรรมข้อมูล มหาวิทยาลัยราชภัฎสวนสุนันทา</b> ในฐานะผู้ควบคุมดูแลระบบฐานข้อมูลศิษย์เก่าวิทยาการคอมพิวเตอร์และจัดเก็บข้อมูลส่วนบุคคลตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ.2562 ได้ตระหนักถึงความสำคัญของการคุ้มครองข้อมูลส่วนบุคคลที่มีประสิทธิภาพและสอดคล้องกับหลักการพื้นฐานของการคุ้มครองข้อมูลส่วนบุคคล คือ หลักความจำเป็น ความได้สัดส่วนและการเคารพสิทธิขั้นพื้นฐานของเจ้าของข้อมูลส่วนบุคคลตามรัฐธรรมนูญและมาตรฐานสากล จึงได้จัดทำนโยบายคุ้มครองข้อมูลส่วนบุคคล เพื่อให้เจ้าของข้อมูลและสาธารณชนรับทราบและเข้าใจถึงวัตถุประสงค์ หลักการและมาตรการรักษาความปลอดภัยของข้อมูลส่วนบุคคล โดย ธปท. เพื่อดำเนินการในหน้าที่รวบรวมและรักษาข้อมูลส่วนบุคคลและการกำกับดูแลข้อมูลนั้น ให้เป็นประโยชน์ต่อการพัฒนาฐานข้อมูลศิษย์เก่าของสาขาวิชา ตลอดจนการบริหารจัดการภายในสาขาวิชา
@@ -115,8 +120,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
       </div>
     </div>
   </div>
-
-  <br> 
+  <br>
   <section>
     <form method="POST" enctype="multipart/form-data">
       <div class="container py-5 h-100">
@@ -127,8 +131,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">แบบฟอร์มลงทะเบียนศิษย์เก่า </h3>
                 <div class="text-end ">
                   <div class="row justify-content-end align-items-end h-100">
-                    <div class="col-md-6">
-                      <input class="form-control" type="text" readonly id="myInput" value="<?php echo 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"> <br>
+                    <div class="col-4">
+                      <input class="form-control" type="text" readonly id="myInput" value="<?php echo 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"> <br>
                     </div>
                   </div>
                   <button type="button" class="btn btn-outline-info" onclick="Hello()"> คัดลอก URL </button>
@@ -145,8 +149,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <label class="form-label" for="alumni_birthday">วันเกิด</label>
-                        <input type="date" name="alumni_birthday" placeholder="วันเกิด" class="form-control form-control-lg" />
+                        <label class="form-label" for="alumni_birthday">วันเกิด <b style="color:red;">*</b></label>
+                        <input type="date" name="alumni_birthday" placeholder="วันเกิด" class="form-control form-control-lg" required />
                       </div>
                     </div>
                   </div>
@@ -188,12 +192,12 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                     </div>
                   </div>
                   <div class="row">
-                    <!-- <div class="col-md-12">
+                    <div class="col-md-12">
                       <div class="form-outline">
                         <label class="form-label">เลขบัตรประชาชน</label>
                         <input type="text" name="alumni_idcard" placeholder="เลขบัตรประชาชน" class="form-control form-control-lg" />
                       </div>
-                    </div> -->
+                    </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
                         <label class="form-label">E-Mail <b style="color:red;">*</b></label>
@@ -210,8 +214,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                   <div class="row">
                     <div class="col-md-12 mb-12 d-flex align-items-center">
                       <div class="form-outline datepicker w-100">
-                        <label for="alumni_address" class="form-label">ที่อยู่สำหรับติดต่อ </label>
-                        <textarea placeholder="ที่อยู่" class="form-control" name="alumni_address" rows="3"></textarea>
+                        <label for="alumni_address" class="form-label">ที่อยู่ <b style="color:red;">*</b></label>
+                        <textarea placeholder="ที่อยู่" class="form-control" name="alumni_address" rows="3" required></textarea>
                       </div>
                     </div>
                   </div>
@@ -335,10 +339,10 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                     </div>
                   </div>
                   <hr size="4px">
-                  <h4>รูปศิษย์เก่า  <b style="color:red;">*</b></h4>
+                  <h4>รูปศิษย์เก่า <b style="color:red;">*</b></h4>
                   <div class="col-md-12 mb-6">
                     <div class="form-outline">
-                      <input type="file" class="form-control-file" name='img'  accept="image/png, image/jpeg" required>
+                      <input type="file" class="form-control-file" name='img' accept="image/png, image/jpeg" required>
                     </div>
                   </div>
                   <div class="mt-4 pt-2 text-center">
@@ -389,6 +393,7 @@ if (isset($_POST['submit'])) {
   $alumni_email = $_POST['alumni_email'];
   $alumni_phone = $_POST['alumni_phone'];
   $alumni_address = $_POST['alumni_address'];
+  $alumni_idcard = $_POST['alumni_idcard'];
   $alumni_comment = $_POST['alumni_comment'];
   $school_name = $_POST['school_name'];
   $school_province = $_POST['school_province'];
@@ -411,7 +416,7 @@ if (isset($_POST['submit'])) {
   }
 
   $dir = "images/alumni_image/";
-  $fileImg = $dir . $alumni_id.".png";
+  $fileImg = $dir . $alumni_id . ".png";
   move_uploaded_file($_FILES["img"]["tmp_name"], $fileImg);
 
 
@@ -424,7 +429,7 @@ if (isset($_POST['submit'])) {
   require 'connection.php';
 
   try {
-    $stmt = $conn->prepare("INSERT INTO tb_alumni(alumni_id, alumni_prefix, alumni_firstname, alumni_lastname, alumni_birthday, alumni_email, alumni_phone, alumni_address, alumni_comment, alumni_sex, alumni_year_in, alumni_year_out, alumni_img) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO tb_alumni(alumni_id, alumni_prefix, alumni_firstname, alumni_lastname, alumni_birthday, alumni_email, alumni_phone, alumni_address, alumni_idcard, alumni_comment, alumni_sex, alumni_year_in, alumni_year_out, alumni_img) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     $stmt->bindParam(1, $alumni_id);
     $stmt->bindParam(2, $alumni_prefix);
     $stmt->bindParam(3, $alumni_firstname);
@@ -433,11 +438,12 @@ if (isset($_POST['submit'])) {
     $stmt->bindParam(6, $alumni_email);
     $stmt->bindParam(7, $alumni_phone);
     $stmt->bindParam(8, $alumni_address);
-    $stmt->bindParam(9, $alumni_comment);
-    $stmt->bindParam(10, $alumni_sex);
-    $stmt->bindParam(11, $alumni_year_in);
-    $stmt->bindParam(12, $alumni_year_out);
-    $stmt->bindParam(13, $fileImg);
+    $stmt->bindParam(9, $alumni_idcard);
+    $stmt->bindParam(10, $alumni_comment);
+    $stmt->bindParam(11, $alumni_sex);
+    $stmt->bindParam(12, $alumni_year_in);
+    $stmt->bindParam(13, $alumni_year_out);
+    $stmt->bindParam(14, $fileImg);
 
 
     $stmt2 = $conn->prepare("INSERT INTO tb_alumni_school(alumni_id, school_name, school_province, school_url) VALUES(?,?,?,?)");
@@ -467,10 +473,11 @@ if (isset($_POST['submit'])) {
     $stmt4->bindParam(7, $company_position);
     $stmt4->execute();
 
+
+
     $stmt->execute();
     $stmt2->execute();
-    echo "<meta http-equiv=\"refresh\" content=\"0;URL=alumni_info.php\">";
-    phpAlert("บันทึกเรียบร้อย กรุณารอผู้ดูแลระบบตรวจสอบข้อมูล");    
+    phpAlert("บันทึกเรียบร้อย");
   } catch (PDOException $e) {
     phpAlert("Error: " . $e->getMessage());
   }

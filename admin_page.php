@@ -96,7 +96,7 @@ $publisher = $sql->fetch(PDO::FETCH_ASSOC);
         </div>
         <br>
         <div class="row justify-content-center">
-          <div class="col-md-3">
+          <div class="col-md-6">
             <div class="text-center">
               <form action="admin_page.php" method="post">
                 <div class="input-group">
