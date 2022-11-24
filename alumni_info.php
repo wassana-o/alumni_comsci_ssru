@@ -68,7 +68,7 @@ include 'connection.php';
   <h2 align="center">ข้อมูลศิษย์เก่า</h2>
   <br />
   <div class="row justify-content-center">
-    <div class="col-md-3">
+    <div class="col-md-6">
       <div class="text-center">
         <form action="alumni_info.php" method="post">
           <div class="input-group">
@@ -80,7 +80,7 @@ include 'connection.php';
     </div>
   </div>
   <br />
-  <div class="container">
+  <div class="container-fluid">
     <div class="row row-cols-1 row-cols-xs-1 row-cols-md-5 g-3 justify-content-md-center">
       <?php
       if (isset($_POST['search'])) {

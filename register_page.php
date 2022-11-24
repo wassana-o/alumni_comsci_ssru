@@ -253,7 +253,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                     <div class="col-md-6 mb-4">
                       <label class="form-label" for="education_level">ระดับการศึกษา</label>
                       <select placeholder="ระดับการศึกษา" class="select form-control form-control-lg" name="education_level">
-                        <option value="1" disabled>เลือกระดับการศึกษาต่อ</option>
+                        <option value="">--เลือกระดับการศึกษาต่อ--</option>
                         <option value="ปริญญาตรี">ปริญญาตรี</option>
                         <option value="ปริญญาโท">ปริญญาโท</option>
                         <option value="ปริญญาเอก">ปริญญาเอก</option>
